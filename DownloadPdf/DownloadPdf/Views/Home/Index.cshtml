@@ -1,0 +1,56 @@
+﻿
+@model IEnumerable<DownloadPdf.Models.Employee>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="h2 text-center">Employee Details</div>
+        <table class="table table-bordered">
+
+            <thead>
+                <tr>
+                    <td>
+                        Id
+                    </td>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        Gender
+                    </td>
+                    <td>
+                        City
+                    </td>
+                    <td>
+                        Hire_Date
+                    </td>
+                </tr>
+
+            </thead>
+            <tbody>
+
+                @foreach (var emp in Model)
+
+                {
+                    <tr>
+                        <td>@emp.EmployeeId</td>
+                        <td>@emp.Name</td>
+                        <td>@emp.Gender</td>
+                        <td>@emp.City</td>
+                        <td>@emp.Hire_Date</td>
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+    </div>
+    <div class="col-sm-2">
+        <div class="btn btn-success">@Html.ActionLink("Create Pdf", "CreatePdf", "Home") </div>
+
+    </div>
+</div>
