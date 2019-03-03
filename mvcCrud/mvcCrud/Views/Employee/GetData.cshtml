@@ -1,0 +1,41 @@
+﻿@model IEnumerable<mvcCrud.Models.Employee>
+@{
+    ViewBag.Title = "Employee Details";
+}
+<br />
+@*<button class="btn btn-default"name="Add Employee" value="Add Employee"><span class="fa fa-plus"></span> @Html.ActionLink("Add Employee","AddorEdit")</button>*@
+<button class="btn btn-primary" onclick="location.href='@Url.Action("AddorEdit","Employee")'" name="Add New Employee"> Add New Employee</button>
+<h2 class="font-type">Employee Details</h2>
+<div class="container">
+    <div class="table-responsive">
+        <div class="font-type">
+            <table class="table table-condensed table-bordered">
+                <thead class="font-type">
+                    <tr>
+                        <th> ID</th>
+                        <th> Name</th>
+                        <th> Designation</th>
+                        <th> Age</th>
+                        <th> Salary</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="font-type">
+                    @foreach (var emp in Model)
+            {
+                    <tr>
+                        <td>@emp.EmpId</td>
+                        <td>@emp.EmpName</td>
+                        <td>@emp.Designation</td>
+                        <td>@emp.Age</td>
+                        <td>@emp.Salary</td>
+                        <td>@Html.ActionLink("Edit", "Update",new {Id= @emp.EmpId}, "Employee")</td>
+                        <td>@Html.ActionLink("Delete", "delete",new { Id = @emp.EmpId }, "Employee")</td>
+                    </tr>
+           }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
