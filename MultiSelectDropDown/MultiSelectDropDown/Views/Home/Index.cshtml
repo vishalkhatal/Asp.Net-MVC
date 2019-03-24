@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="form-group required" style="margin:10%">
+    <div class="col-md-10">
+        <select id="WorkingDays" multiple="multiple">
+            @foreach (var item in ViewBag.WorkingDays)
+            {
+                <option value=@item.Value>@item.Text</option>
+            }
+        </select>
+    </div>
+</div>
