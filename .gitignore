@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ActionResultAndFilters/.vs/ActionResultAndFilters/config
+/ActionResultAndFilters/.vs/ActionResultAndFilters/v16/Server/sqlite3
+/ActionResultAndFilters/ActionResultAndFilters/bin
+/ActionResultAndFilters/ActionResultAndFilters/obj/Debug
+/ActionResultAndFilters/packages
+/ActionResultAndFilters/.vs/ActionResultAndFilters/v16
